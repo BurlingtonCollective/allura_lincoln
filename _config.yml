@@ -1,2 +1,1 @@
 baseurl: /allura_lincoln
-exclude: ['node_modules']
