@@ -1,0 +1,27 @@
+nav#category-nav {
+	position: fixed;
+	left: @primary-nav-width + @grid-gutter-width / 2;
+	right: @controls-width + @grid-gutter-width / 2;
+	bottom: 0;
+	background: @background;
+	.box-shadow(0 0 12px 8px @background);
+	padding: 9px 0;
+
+	span {
+		font-size: 18px;
+	}
+
+	ul.nav {
+		> li {
+			a {
+				color: @black;
+				padding-left: 0;
+
+				&:hover {
+					background: transparent;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

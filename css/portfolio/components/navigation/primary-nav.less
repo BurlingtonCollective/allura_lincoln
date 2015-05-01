@@ -1,6 +1,7 @@
 @primary-nav-padding: 20px;
 
 nav#primary-nav {
+	padding: 0 @primary-nav-padding;
 
 	h1 {
 		margin: @primary-nav-padding 0 0 0;
@@ -28,6 +29,13 @@ nav#primary-nav {
 		> li {
 			a {
 				text-align: center;
+				font-size: 32px;
+				color: @black;
+
+				&:hover {
+					background: transparent;
+					text-decoration: underline;
+				}
 			}
 		}
 	}

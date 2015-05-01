@@ -1,5 +1,5 @@
 @logo-height: 75px;
-@primary-nav-width: 400px;
+@primary-nav-width: 340px;
 @controls-width: 60px;
 
 @media (min-width: @screen-md-min) {
@@ -9,11 +9,12 @@
 
 	body {
 		min-height: 100%;
+		background: @background;
 
 		> section {
-			padding-top: @logo-height + @primary-nav-padding * 2;
-			padding-left: @primary-nav-width;
+			padding-left: @primary-nav-width + @grid-gutter-width / 2;
 			padding-right: @controls-width;
+			padding-bottom: 200px;
 		}
 	}
 

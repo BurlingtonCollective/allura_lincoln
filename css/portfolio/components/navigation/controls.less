@@ -1,4 +1,4 @@
-@label-height: 60px;
+@count-label-height: 60px;
 
 nav#controls {
 	ul.nav {
@@ -8,6 +8,7 @@ nav#controls {
 			position: absolute;
 			width: 100%;
 			margin: 0;
+			border-radius: 0;
 
 			+ li {
 				margin: 0;
@@ -16,8 +17,14 @@ nav#controls {
 			a {
 				height: 100%;
 				position: relative;
+				font-size: 22px;
+				padding: 0;
+				color: @black;
+				font-family: @font-family-sans-serif;
 
 				&:hover {
+					background: @black;
+					color: @background;
 					cursor: pointer;
 				}
 			}
@@ -26,35 +33,37 @@ nav#controls {
 				position: absolute;
 				left: 0;
 				width: 100%;
-				height: @label-height;
-				line-height: @label-height;
+				height: @count-label-height;
+				line-height: @count-label-height;
 			}
 
-			&.label {
+			&.count {
 				background: @black;
 				top: 50%;
-				height: @label-height;
-				line-height: @label-height;
+				height: @count-label-height;
+				line-height: @count-label-height;
 				.translate(0, -50%);
+				font-size: 20px;
+				color: @background;
 			}
 
 			&:first-child {
 				top: 0;
 				bottom: 50%;
-				padding-bottom: @label-height / 2;
+				padding-bottom: @count-label-height / 2;
 
 				span.icon-wrapper {
-					bottom: @label-height / 2;
+					bottom: @count-label-height / 2;
 				}
 			}
 
 			&:last-child {
 				bottom: 0;
 				top: 50%;
-				padding-top: @label-height / 2;
+				padding-top: @count-label-height / 2;
 
 				span.icon-wrapper {
-					top: @label-height / 2;
+					top: @count-label-height / 2;
 				}
 			}
 		}
