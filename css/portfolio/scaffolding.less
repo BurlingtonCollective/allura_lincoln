@@ -1,0 +1,33 @@
+@primary-nav-width: 400px;
+@controls-width: 40px;
+
+@media (min-width: @screen-md-min) {
+	html {
+		height: 100%;
+	}
+
+	body {
+		min-height: 100%;
+
+		> section {
+			padding-left: @primary-nav-width;
+			padding-right: @controls-width;
+		}
+	}
+
+	#primary-nav {
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: @primary-nav-width;
+	}
+
+	#controls {
+		position: fixed;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: @controls-width;
+	}
+}
