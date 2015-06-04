@@ -3,34 +3,34 @@
 @controls-width: 60px;
 
 @media (min-width: @screen-md-min) {
-	html {
-		height: 100%;
-	}
+  html {
+    height: 100%;
+  }
 
-	body {
-		min-height: 100%;
-		background: @background;
+  body {
+    min-height: 100%;
+    background: @background;
 
-		> section {
-			padding-left: @primary-nav-width + @grid-gutter-width / 2;
-			padding-right: @controls-width;
-			padding-bottom: 200px;
-		}
-	}
+    > section {
+      padding-left: @primary-nav-width + @grid-gutter-width / 2;
+      padding-right: @controls-width;
+      padding-bottom: 200px;
+    }
+  }
 
-	#primary-nav {
-		position: fixed;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		width: @primary-nav-width;
-	}
+  #primary-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: @primary-nav-width;
+  }
 
-	#controls {
-		position: fixed;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		width: @controls-width;
-	}
+  #controls {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: @controls-width;
+  }
 }
