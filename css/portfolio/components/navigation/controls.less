@@ -1,71 +1,71 @@
 @count-label-height: 60px;
 
 nav#controls {
-	ul.nav {
-		height: 100%;
-		> li {
-			text-align: center;
-			position: absolute;
-			width: 100%;
-			margin: 0;
-			border-radius: 0;
+  ul.nav {
+    height: 100%;
+    > li {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
 
-			+ li {
-				margin: 0;
-			}
+      + li {
+        margin: 0;
+      }
 
-			a {
-				height: 100%;
-				position: relative;
-				font-size: 22px;
-				padding: 0;
-				color: @black;
-				font-family: @font-family-sans-serif;
+      a {
+        height: 100%;
+        position: relative;
+        font-size: 22px;
+        padding: 0;
+        color: @black;
+        font-family: @font-family-sans-serif;
 
-				&:hover {
-					background: @black;
-					color: @background;
-					cursor: pointer;
-				}
-			}
+        &:hover {
+          background: @black;
+          color: @background;
+          cursor: pointer;
+        }
+      }
 
-			span.icon-wrapper {
-				position: absolute;
-				left: 0;
-				width: 100%;
-				height: @count-label-height;
-				line-height: @count-label-height;
-			}
+      span.icon-wrapper {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: @count-label-height;
+        line-height: @count-label-height;
+      }
 
-			&.count {
-				background: @black;
-				top: 50%;
-				height: @count-label-height;
-				line-height: @count-label-height;
-				.translate(0, -50%);
-				font-size: 20px;
-				color: @background;
-			}
+      &.count {
+        background: @black;
+        top: 50%;
+        height: @count-label-height;
+        line-height: @count-label-height;
+        .translate(0, -50%);
+        font-size: 20px;
+        color: @background;
+      }
 
-			&:first-child {
-				top: 0;
-				bottom: 50%;
-				padding-bottom: @count-label-height / 2;
+      &:first-child {
+        top: 0;
+        bottom: 50%;
+        padding-bottom: @count-label-height / 2;
 
-				span.icon-wrapper {
-					bottom: @count-label-height / 2;
-				}
-			}
+        span.icon-wrapper {
+          bottom: @count-label-height / 2;
+        }
+      }
 
-			&:last-child {
-				bottom: 0;
-				top: 50%;
-				padding-top: @count-label-height / 2;
+      &:last-child {
+        bottom: 0;
+        top: 50%;
+        padding-top: @count-label-height / 2;
 
-				span.icon-wrapper {
-					top: @count-label-height / 2;
-				}
-			}
-		}
-	}
+        span.icon-wrapper {
+          top: @count-label-height / 2;
+        }
+      }
+    }
+  }
 }
