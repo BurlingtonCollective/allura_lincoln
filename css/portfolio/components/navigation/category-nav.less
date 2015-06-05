@@ -1,11 +1,11 @@
 nav#category-nav {
-  position: fixed;
-  left: @primary-nav-width + @grid-gutter-width / 2;
-  right: @controls-width + @grid-gutter-width / 2;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: @controls-width;
   bottom: 0;
+  left: @primary-nav-width;
   background: @background;
-  .box-shadow(0 0 12px 8px @background);
-  padding: 9px 0;
 
   span {
     font-size: 18px;
