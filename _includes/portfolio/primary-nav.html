@@ -1,12 +1,23 @@
 <nav id="primary-nav">
-  <h1>
-    <img class="img-responsive" src="{{ baseurl }}/images/logo.svg">
-  </h1>
-  <ul class="nav nav-stacked">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Categories</a></li>
-    <li><a href="#">Resume</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
+  <div class="top">
+    <h1 id="brand">
+      <span class="sr-only">Allura Lincoln Photography</span>
+      <img class="img-responsive" src="{{ baseurl }}/images/logo.svg" alt="Allura Lincoln Photography">
+    </h1>
+    <button class="navbar-toggle">
+      <span class="sr-only">Toggle Navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="nav-container">
+    <ul class="nav nav-stacked">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">Resume</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
   <img id="decoration" class="img-responsive" src="{{ baseurl }}/images/decoration.png">
 </nav>
