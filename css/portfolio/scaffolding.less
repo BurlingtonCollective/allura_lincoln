@@ -1,6 +1,7 @@
 @logo-height: 75px;
-@primary-nav-width: 480px;
+@primary-nav-width: 300px;
 @controls-width: 60px;
+@item-padding: 40px;
 
 @media (min-width: @screen-md-min) {
   html {
@@ -12,15 +13,24 @@
     background: @background;
 
     > section {
-      padding-left: @primary-nav-width * 1.25;
-      padding-right: @controls-width;
-      padding-bottom: 20px;
+      padding-bottom: @item-padding;
       position: relative;
+      float: right;
 
       #page-title {
         margin-top: 49px;
         margin-bottom: 40px;
         text-align: right;
+      }
+
+      @media (min-width: @grid-float-breakpoint) {
+        max-width: 800px + @primary-nav-width + @item-padding + @controls-width + @item-padding;
+        padding-left: @primary-nav-width + @item-padding;
+        padding-right: @controls-width + @item-padding;
+      }
+
+      @media (min-width: 1460px) {
+        max-width: 960px + @primary-nav-width + @item-padding + @controls-width + @item-padding;
       }
     }
   }
