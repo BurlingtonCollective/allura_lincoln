@@ -8,14 +8,65 @@ article {
       font-size: 32px;
       margin: 40px 0;
     }
+
+    a {
+      display: block;
+      position: relative;
+    }
+
+    .title {
+      font-size: 22px;
+      color: @background;
+    }
     
     &:last-child {
       padding-bottom: 0;
     }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background: fade(@black, 60%);
+      }
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+      a {
+        .mask {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: fade(@black, 60%);
+          color: @white;
+          .opacity(0);
+          .transition('all .3s ease-in-out');
+
+          .title {
+            position: absolute;
+            top: 50%;
+            .translate(0, -50%);
+            color: @background;
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        &:hover {
+          .mask {
+            .opacity(1);
+          }
+        }
+      }
+    }
   }
 
   &.entry {
-
     p {
       font-size: 28px;
     }
