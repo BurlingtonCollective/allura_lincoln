@@ -14,27 +14,27 @@ app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'portfolio/home/index.html',
-      controller: 'HomeCtrl'
+      controller: 'MainCtrl'
     })
     .when('/category/:categoryId', {
       templateUrl: 'portfolio/category/index.html',
-      controller: 'CategoryCtrl'
+      controller: 'MainCtrl'
     })
     .when('/project/:projectId', {
       templateUrl: 'portfolio/project/index.html',
-      controller: 'ProjectDetailCtrl'
+      controller: 'MainCtrl'
     })
     .when('/resume', {
       templateUrl: 'portfolio/resume/index.html',
-      controller: 'ResumeCtrl'
+      controller: 'MainCtrl'
     })
     .when('/contact', {
       templateUrl: 'portfolio/contact/index.html',
-      controller: 'ContactCtrl'
+      controller: 'MainCtrl'
     })
     .when('/error', {
       templateUrl: 'portfolio/error/index.html',
-      controller: 'ErrorCtrl'
+      controller: 'MainCtrl'
     })
     .otherwise({
       redirectTo: '/error'

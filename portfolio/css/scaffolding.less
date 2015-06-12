@@ -10,6 +10,19 @@ html {
     min-height: 100%;
     background: @background;
   }
+
+  #primary-nav {
+    z-index: 4;
+  }
+
+  #main {
+    position: relative;
+    z-index: 3;
+  }
+
+  #controls {
+    z-index: 5;
+  }
 }
 
 @media (max-width: @grid-float-breakpoint-max) {
@@ -19,25 +32,27 @@ html {
 }
 
 @media (min-width: @grid-float-breakpoint) {
-  #main > section {
-    padding-bottom: @item-padding;
-    position: relative;
-    float: right;
+  #main {
+    > section {
+      padding-bottom: @item-padding;
+      position: relative;
+      float: right;
 
-    #page-title {
-      margin-top: 49px;
-      margin-bottom: 40px;
-      text-align: right;
-    }
+      #page-title {
+        margin-top: 49px;
+        margin-bottom: 40px;
+        text-align: right;
+      }
 
-    @media (min-width: @grid-float-breakpoint) {
-      max-width: 800px + @primary-nav-width + @item-padding + @controls-width + @item-padding;
-      padding-left: @primary-nav-width + @item-padding;
-      padding-right: @controls-width + @item-padding;
-    }
+      @media (min-width: @grid-float-breakpoint) {
+        max-width: 800px + @primary-nav-width + @item-padding + @controls-width + @item-padding;
+        padding-left: @primary-nav-width + @item-padding;
+        padding-right: @controls-width + @item-padding;
+      }
 
-    @media (min-width: 1460px) {
-      max-width: 960px + @primary-nav-width + @item-padding + @controls-width + @item-padding;
+      @media (min-width: 1460px) {
+        max-width: 960px + @primary-nav-width + @item-padding + @controls-width + @item-padding;
+      }
     }
   }
 

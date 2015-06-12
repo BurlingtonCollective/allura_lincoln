@@ -1,6 +1,8 @@
 @primary-nav-padding: 20px;
 
 nav#primary-nav {
+  overflow: hidden;
+
   @media (max-width: @grid-float-breakpoint-max) {
     #brand {
       display: inline-block;
@@ -49,22 +51,39 @@ nav#primary-nav {
       }
     }
 
-    ul.nav {
+    .nav-slider {
       position: absolute;
       width: 100%;
       top: 50%;
       .translate(0, -50%);
       left: 0;
+      .transition(left .3s ease-in-out);
+
+      &#nav-secondary {
+        left: 100%;
+      }
+    }
+
+    .show-secondary .nav-slider {
+      &#nav-secondary {
+        left: 0;
+      }
+
+      &#nav-initial {
+        left: -100%;
+      }
+    }
+
+    ul.nav {
 
       > li {
-        a {
+        > a {
           text-align: center;
           font-size: 32px;
           color: @black;
 
-          &:hover {
+          &:hover, &:active, &:focus {
             background: transparent;
-            text-decoration: underline;
           }
         }
       }
