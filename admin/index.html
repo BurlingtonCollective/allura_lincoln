@@ -6,7 +6,7 @@
 </head>
 <body>
 
-  <a href="#/logout" class="btn btn-primary">Log Out</a>
+  <nav top-nav></nav>
 
   <div ng-view></div>
 
@@ -18,11 +18,14 @@
   <!-- app start -->
   <script type="text/javascript" src="main.js"></script>
 
-  <!-- authentication -->
+  <!-- services -->
   <script type="text/javascript" src="auth.js"></script>
 
   <!-- controllers -->
   <script type="text/javascript" src="modules/login/ctrl.js"></script>
   <script type="text/javascript" src="modules/logout/ctrl.js"></script>
+
+  <!-- directives -->
+  <script type="text/javascript" src="includes/top-nav/dir.js"></script>
 </body>
 </html>

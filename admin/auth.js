@@ -1,5 +1,5 @@
-directives.factory('Auth', ['$firebaseAuth', function($firebaseAuth) {
+services.factory('Auth', ['$firebaseAuth', function($firebaseAuth) {
   
   return $firebaseAuth(fb);
-  
+
 }]);
