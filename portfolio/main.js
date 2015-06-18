@@ -1,8 +1,9 @@
-var app = angular.module('portfolio', ['ngRoute', 'app.controllers', 'app.services', 'app.directives']);
+var app = angular.module('portfolio', ['ngRoute', 'firebase', 'app.controllers', 'app.services', 'app.directives']);
 
 var controllers = angular.module('app.controllers', []);
 var services = angular.module('app.services', []);
 var directives = angular.module('app.directives', []);
+var fb = new Firebase('https://alluralincoln.firebaseio.com');
 
 app.run(['$rootScope', '$location', function($rootScope, $location) {
   $rootScope.$on('$routeChangeSuccess', function() {
