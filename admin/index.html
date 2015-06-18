@@ -2,15 +2,27 @@
 <html ng-app="cms">
 <head>
   <title>Allura Lincoln's CMS</title>
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-  
+
+  <a href="#/logout" class="btn btn-primary">Log Out</a>
+
+  <div ng-view></div>
 
   <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
   <script type="text/javascript" src="../node_modules/angular-route/angular-route.min.js"></script>
-  <script type="text/javascript" src="../node_modules/firebase/lib/firebase-web.js"></script>
+  <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
   <script type="text/javascript" src="../node_modules/angularfire/dist/angularfire.min.js"></script>
 
-  <script type="text/javascript" src="main.js"></script>  
+  <!-- app start -->
+  <script type="text/javascript" src="main.js"></script>
+
+  <!-- authentication -->
+  <script type="text/javascript" src="auth.js"></script>
+
+  <!-- controllers -->
+  <script type="text/javascript" src="modules/login/ctrl.js"></script>
+  <script type="text/javascript" src="modules/logout/ctrl.js"></script>
 </body>
 </html>

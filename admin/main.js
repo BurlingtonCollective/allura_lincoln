@@ -6,38 +6,51 @@ var directives = angular.module('app.directives', []);
 var fb = new Firebase('https://alluralincoln.firebaseio.com');
 
 app.run(['$rootScope', '$location', function($rootScope, $location) {
-  $rootScope.$on('$routeChangeSuccess', function() {
-    console.log('dont forget analytics');
+  
+  $rootScope.$on('$routeChangeError', function(event, next, previous, error) {
+    if (error === 'AUTH_REQUIRED') {
+      $location.path('/');
+    }
   });
+
 }]);
 
 app.config(['$routeProvider', function($routeProvider) {
+  
   $routeProvider
     .when('/', {
-      templateUrl: 'portfolio/views/home/index.html',
-      controller: 'MainCtrl'
+      templateUrl: 'modules/login/index.html',
+      controller: 'LoginCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$waitForAuth();
+        }]
+      }
     })
-    .when('/category/:categoryId', {
-      templateUrl: 'portfolio/views/category/index.html',
-      controller: 'MainCtrl'
+    .when('/logout', {
+      templateUrl: 'modules/logout/index.html',
+      controller: 'LogoutCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$waitForAuth();
+        }]
+      }
     })
-    .when('/project/:projectId', {
-      templateUrl: 'portfolio/views/project/index.html',
-      controller: 'MainCtrl'
-    })
-    .when('/resume', {
-      templateUrl: 'portfolio/views/resume/index.html',
-      controller: 'MainCtrl'
-    })
-    .when('/contact', {
-      templateUrl: 'portfolio/views/contact/index.html',
-      controller: 'MainCtrl'
+    .when('/dashboard', {
+      templateUrl: 'modules/dashboard/index.html',
+      controller: 'DashboardCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
     })
     .when('/error', {
-      templateUrl: 'portfolio/views/error/index.html',
-      controller: 'MainCtrl'
+      templateUrl: 'modules/error/index.html',
+      controller: 'LoginCtrl'
     })
     .otherwise({
       redirectTo: '/error'
     });
+
 }]);
