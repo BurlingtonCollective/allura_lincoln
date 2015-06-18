@@ -11,7 +11,7 @@ module.exports = function (grunt) {
           sourceMap: true,
           sourceMapFilename: 'portfolio/css/app.css.map',
           sourceMapUrl: 'portfolio/css/app.css.map',
-          sourceMapRootpath: 'http://localhost:8888/allura_lincoln/'
+          sourceMapRootpath: 'http://localhost:8888/'
         },
         files: {
           'portfolio/css/app.css': 'portfolio/css/app.less'
@@ -25,12 +25,12 @@ module.exports = function (grunt) {
           paths: ["css"],
           livereload: true,
           sourceMap: true,
-          sourceMapFilename: 'css/cms/app.css.map',
-          sourceMapUrl: 'css/cms/app.css.map',
-          sourceMapRootpath: 'http://localhost:4000/'
+          sourceMapFilename: 'admin/css/app.css.map',
+          sourceMapUrl: 'admin/css/app.css.map',
+          sourceMapRootpath: 'http://localhost:8888/'
         },
         files: {
-          'css/cms/app.css': 'css/cms/app.less'
+          'admin/css/app.css': 'admin/css/app.less'
         }
       }
     },
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
           livereload: true
         },
         files: [
-          'css/cms/**/*.less'
+          'admin/css/**/*.less'
         ],
         tasks: [
           'less:cms'
