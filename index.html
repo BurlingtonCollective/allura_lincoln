@@ -11,7 +11,7 @@
     <div class="top">
       <h1 id="brand">
         <span class="sr-only">Allura Lincoln Photography</span>
-        <img class="img-responsive" src="images/logo.svg" alt="Allura Lincoln Photography">
+        <img class="img-responsive" src="portfolio/images/logo.svg" alt="Allura Lincoln Photography">
       </h1>
       <button class="navbar-toggle">
         <span class="sr-only">Toggle Navigation</span>
@@ -23,7 +23,7 @@
 
     <div nav-slider></div>
 
-    <img id="decoration" class="img-responsive" src="images/decoration.png">
+    <img id="decoration" class="img-responsive" src="portfolio/images/decoration.png">
   </nav>
   <div id="main" ng-view autoscroll></div>
   <nav id="controls">
@@ -36,13 +36,16 @@
 
   <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
   <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
-  <script type="text/javascript" src="node_modules/firebase/lib/firebase-web.js"></script>
-  <script type="text/javascript" src="node_modules/angularfire/angularfire.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script type="text/javascript" src="node_modules/angularfire/dist/angularfire.min.js"></script>
+  
+  <!-- app start -->
+  <script type="text/javascript" src="portfolio/main.js"></script>
 
-  <script type="text/javascript" src="js/controllers/main.js"></script>
+  <!-- controllers -->
+  <script type="text/javascript" src="portfolio/views/home/ctrl.js"></script>
 
-  <script type="text/javascript" src="js/directives/auth.js"></script>
-  <script type="text/javascript" src="js/directives/nav-slider.js"></script>
+  <!-- directives -->
+  <script type="text/javascript" src="portfolio/includes/nav-slider/dir.js"></script>
 </body>
 </html>
