@@ -14,6 +14,11 @@
             <label>Description</label>
             <textarea class="form-control" rows="5" name="description" ng-model="project.description"></textarea>
           </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="featured" ng-model="project.featured"> Featured?
+            </label>
+          </div>
         </div>
         <div class="col-xs-6">
           <div class="form-group">
@@ -26,7 +31,7 @@
             <div class="input-group" ng-repeat="img in project.images" ng-empty>
               <input type="url" class="form-control" name="image[]" ng-model="img">
               <span class="input-group-btn">
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-danger" ng-click="deleteImage($index)">Delete</button>
               </span>
             </div>
           </div>

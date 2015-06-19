@@ -29,6 +29,10 @@ controllers.controller('ProjectDetailCtrl', [
     $scope.newImg = null;
   }
 
+  $scope.deleteImage = function(index) {
+    $scope.project.images.splice(index, 1);
+  }
+
   $scope.submit = function() {
     if ($scope.form.$valid) {
       if (typeof($scope.project.$id) != 'undefined') {
