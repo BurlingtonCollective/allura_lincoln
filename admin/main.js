@@ -86,7 +86,7 @@ app.config(['$routeProvider', function($routeProvider) {
     })
     .when('/error', {
       templateUrl: 'modules/error/index.html',
-      controller: 'LoginCtrl'
+      controller: 'ErrorCtrl'
     })
     .otherwise({
       redirectTo: '/error'

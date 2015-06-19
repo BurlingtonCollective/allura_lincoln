@@ -1,4 +1,9 @@
-controllers.controller('ProjectDetailCtrl', ['$scope', '$routeParams', '$firebaseArray', function($scope, $routeParams, $firebaseArray) {
+controllers.controller('ProjectDetailCtrl', [
+  '$scope',
+  '$routeParams',
+  '$location',
+  '$firebaseArray',
+  function($scope, $routeParams, $location, $firebaseArray) {
 
   var projectsRef = new Firebase(fbPath + '/projects');
 
@@ -14,12 +19,26 @@ controllers.controller('ProjectDetailCtrl', ['$scope', '$routeParams', '$firebas
       } else {
         $scope.title = "New Project";
         $scope.submitText = "Create";
+        $scope.project = {};
+        $scope.project.images = [];
       }
     });
 
+  $scope.addImage = function() {
+    $scope.project.images.push($scope.newImg);
+    $scope.newImg = null;
+  }
+
   $scope.submit = function() {
     if ($scope.form.$valid) {
-      $scope.projects.$add($scope.project);
+      if (typeof($scope.project.$id) != 'undefined') {
+        $scope.projects.$save($scope.project);
+      } else {
+        $scope.projects.$add($scope.project)
+          .then(function(data) {
+            $location.path('/project/id/' + data.key());
+          });
+      }
     }
   }
 

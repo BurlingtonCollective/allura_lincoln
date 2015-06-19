@@ -44,7 +44,7 @@ controllers.controller('CategoryDetailCtrl', [
       } else {
         $scope.categories.$add($scope.category)
           .then(function(data) {
-            $location.path('/cateogry/id/' + data.key());
+            $location.path('/category/id/' + data.key());
           });
       }
     }
