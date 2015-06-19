@@ -1,17 +1,28 @@
 <section id="home">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12">
-        <h1 id="page-title">Portraits</h1>
-        <article class="item">
-          <img class="img-responsive" src="portfolio/images/projects/smoke.jpg">
-        </article>
-        <article class="item">
-          <img class="img-responsive" src="portfolio/images/projects/allura.jpg">
-        </article>
-        <article class="item">
-          <img class="img-responsive" src="portfolio/images/projects/glow-sticks.jpg">
-        </article>
+      <div class="col-xs-12" ng-switch on="relevantProjects">
+        <h1 id="page-title">{{ category.name }}</h1>
+        <div ng-switch-when="true">
+          <article class="item" ng-repeat="project in relevantProjects">
+            <a ng-href="#/project/{{ project.$id }}">
+              <div class="mask">
+                <span class="title">{{ project.name }}</span>
+              </div>
+              <img class="img-responsive" ng-src="{{ project.coverImg }}">
+            </a>
+          </article>
+        </div>
+        <div ng-switch-when="false">
+          <article class="item" ng-repeat="category in childCategories">
+            <a ng-href="#/category/{{ category.$id }}">
+              <div class="mask">
+                <span class="title">{{ category.name }}</span>
+              </div>
+              <img class="img-responsive" ng-src="{{ category.coverImg }}">
+            </a>
+          </article>
+        </div>
       </div>
     </div>
   </div>

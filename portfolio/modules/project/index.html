@@ -2,16 +2,13 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">
-        <h1 id="page-title">Strangers in the City [may 2008]</h1>
+        <h1 id="page-title">{{ project.name }}</h1>
         <article class="item">
-          <img class="img-responsive" src="images/projects/smoke.jpg">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam laudantium consectetur debitis voluptates iure esse dolores, inventore, voluptate officiis voluptatem sed ad omnis hic placeat nesciunt sit adipisci! Cumque, reprehenderit.</p>
-        </article>
-        <article class="item">
-          <img class="img-responsive" src="portfolio/images/projects/allura.jpg">
-        </article>
-        <article class="item">
-          <img class="img-responsive" src="portfolio/images/projects/glow-sticks.jpg">
+          <img class="img-responsive" ng-src="{{ project.coverImg }}">
+          <p>{{ project.description }}</p>
+          <div class="img-wrapper" ng-repeat="img in project.images">
+            <img class="img-responsive" ng-src="{{ img }}">
+          </div>
         </article>
       </div>
     </div>
