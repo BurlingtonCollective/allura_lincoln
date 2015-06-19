@@ -5,9 +5,11 @@ controllers.controller('ProjectDetailCtrl', [
   '$firebaseArray',
   function($scope, $routeParams, $location, $firebaseArray) {
 
-  var projectsRef = new Firebase(fbPath + '/projects');
+  var projectsRef = new Firebase(fbPath + '/projects'),
+      categoriesRef = new Firebase(fbPath + '/categories');
 
   $scope.projects = $firebaseArray(projectsRef);
+  $scope.categories = $firebaseArray(categoriesRef);
 
   $scope.projects.$loaded()
     .then(function() {
