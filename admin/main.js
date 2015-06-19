@@ -11,6 +11,8 @@ app.run(['$rootScope', '$location', function($rootScope, $location) {
   $rootScope.$on('$routeChangeError', function(event, next, previous, error) {
     if (error === 'AUTH_REQUIRED') {
       $location.path('/');
+    } else {
+      $location.path('/error');
     }
   });
 
@@ -40,6 +42,15 @@ app.config(['$routeProvider', function($routeProvider) {
     .when('/dashboard', {
       templateUrl: 'modules/dashboard/index.html',
       controller: 'DashboardCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    })
+    .when('/project/:id', {
+      templateUrl: 'modules/project/detail/index.html',
+      controller: 'ProjectDetailCtrl',
       resolve: {
         'currentAuth': ['Auth', function(Auth) {
           return Auth.$requireAuth();
