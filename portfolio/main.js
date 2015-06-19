@@ -14,27 +14,27 @@ app.run(['$rootScope', '$location', function($rootScope, $location) {
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'portfolio/views/home/index.html',
+      templateUrl: 'portfolio/modules/home/index.html',
       controller: 'HomeCtrl'
     })
     .when('/category/:categoryId', {
-      templateUrl: 'portfolio/views/category/index.html',
+      templateUrl: 'portfolio/modules/category/index.html',
       controller: 'HomeCtrl'
     })
     .when('/project/:projectId', {
-      templateUrl: 'portfolio/views/project/index.html',
+      templateUrl: 'portfolio/modules/project/index.html',
       controller: 'HomeCtrl'
     })
     .when('/resume', {
-      templateUrl: 'portfolio/views/resume/index.html',
+      templateUrl: 'portfolio/modules/resume/index.html',
       controller: 'HomeCtrl'
     })
     .when('/contact', {
-      templateUrl: 'portfolio/views/contact/index.html',
-      controller: 'HomeCtrl'
+      templateUrl: 'portfolio/modules/contact/index.html',
+      controller: 'ContactCtrl'
     })
     .when('/error', {
-      templateUrl: 'portfolio/views/error/index.html',
+      templateUrl: 'portfolio/modules/error/index.html',
       controller: 'HomeCtrl'
     })
     .otherwise({
