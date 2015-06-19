@@ -3,7 +3,8 @@ var app = angular.module('cms', ['ngRoute', 'firebase', 'app.controllers', 'app.
 var controllers = angular.module('app.controllers', []);
 var services = angular.module('app.services', []);
 var directives = angular.module('app.directives', []);
-var fb = new Firebase('https://alluralincoln.firebaseio.com');
+var fbPath = 'https://alluralincoln.firebaseio.com';
+var fb = new Firebase(fbPath);
 
 app.run(['$rootScope', '$location', function($rootScope, $location) {
   
@@ -39,6 +40,15 @@ app.config(['$routeProvider', function($routeProvider) {
     .when('/dashboard', {
       templateUrl: 'modules/dashboard/index.html',
       controller: 'DashboardCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    })
+    .when('/project/new', {
+      templateUrl: 'modules/project/detail/index.html',
+      controller: 'ProjectDetailCtrl',
       resolve: {
         'currentAuth': ['Auth', function(Auth) {
           return Auth.$requireAuth();
