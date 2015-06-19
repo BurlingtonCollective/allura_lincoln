@@ -18,7 +18,7 @@ controllers.controller('ProjectDetailCtrl', ['$scope', '$routeParams', '$firebas
     });
 
   $scope.submit = function() {
-    if($scope.form.$valid) {
+    if ($scope.form.$valid) {
       $scope.projects.$add($scope.project);
     }
   }

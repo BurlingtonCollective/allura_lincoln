@@ -23,14 +23,22 @@ controllers.controller('CategoryDetailCtrl', [
       $scope.parentOptions = [];
 
       angular.forEach($scope.categories, function(category, key) {
-        if (!("parent" in category) && (typeof($scope.category) == 'undefined' || category.$id !== $scope.category.$id)) {
+        if (category.child || typeof($scope.category) == 'undefined' || category.$id !== $scope.category.$id) {
           $scope.parentOptions.push(category);  
         }
       });
     });
 
   $scope.submit = function() {
-    if($scope.form.$valid) {
+    if ($scope.form.$valid) {
+      if (typeof($scope.category.parent) == 'string' && $scope.category.parent.length < 1) {
+        $scope.category.child = false;
+      }
+
+      if (!$scope.category.child) {
+        $scope.category.parent = null;
+      }
+
       if (typeof($scope.category.$id) != 'undefined') {
         $scope.categories.$save($scope.category);
       } else {
