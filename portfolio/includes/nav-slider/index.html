@@ -10,9 +10,9 @@
   <div id="nav-secondary" class="nav-slider">
     <ul class="nav nav-stacked">
       <li><a href="javascript:void(0)" class="back-link" ng-click="toggleNavSecondary()">&larr;</a></li>
-      <li><a href="#/category/digital">Digital</a></li>
-      <li><a href="#/category/bw-film">BW Film</a></li>
-      <li><a href="#/category/color-film">Color Film</a></li>
+      <li ng-repeat="category in topLevelCategories">
+        <a ng-href="#/category/{{ category.$id }}">{{ category.name }}</a>
+      </li>
     </ul>
   </div>
 </div>

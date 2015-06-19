@@ -3,28 +3,12 @@
     <div class="row">
       <div class="col-xs-12">
         <h1 id="page-title">Featured Projects</h1>
-        <article class="item">
-          <a href="#/project/1">
+        <article class="item" ng-repeat="project in featuredProjects">
+          <a ng-href="#/project/{{ project.$id }}">
             <div class="mask">
-              <span class="title">Smoke</span>
+              <span class="title">{{ project.name }}</span>
             </div>
-            <img class="img-responsive" src="portfolio/images/projects/smoke.jpg">
-          </a>
-        </article>
-        <article class="item">
-          <a href="#/project/2">
-            <div class="mask">
-              <span class="title">Self Portrait Session - 4/18/15</span>
-            </div>
-            <img class="img-responsive" src="portfolio/images/projects/allura.jpg">
-          </a>
-        </article>
-        <article class="item">
-          <a href="#/project/3">
-            <div class="mask">
-              <span class="title">Glow Sticks</span>
-            </div>
-            <img class="img-responsive" src="portfolio/images/projects/glow-sticks.jpg">
+            <img class="img-responsive" ng-src="{{ project.coverImg }}">
           </a>
         </article>
       </div>
