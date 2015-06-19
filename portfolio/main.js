@@ -18,13 +18,13 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'portfolio/modules/home/index.html',
       controller: 'HomeCtrl'
     })
-    .when('/category/:categoryId', {
+    .when('/category/:id', {
       templateUrl: 'portfolio/modules/category/index.html',
-      controller: 'HomeCtrl'
+      controller: 'CategoryCtrl'
     })
-    .when('/project/:projectId', {
+    .when('/project/:id', {
       templateUrl: 'portfolio/modules/project/index.html',
-      controller: 'HomeCtrl'
+      controller: 'ProjectCtrl'
     })
     .when('/resume', {
       templateUrl: 'portfolio/modules/resume/index.html',
