@@ -1,7 +1,7 @@
 <section id="home">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12" ng-switch on="relevantProjects">
+      <div class="col-xs-12" ng-switch on="relevantProjects.length > 0">
         <h1 id="page-title">{{ category.name }}</h1>
         <div ng-switch-when="true">
           <article class="item" ng-repeat="project in relevantProjects">
