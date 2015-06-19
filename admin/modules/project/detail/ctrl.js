@@ -6,6 +6,7 @@ controllers.controller('ProjectDetailCtrl', ['$scope', '$routeParams', '$firebas
 
   $scope.projects.$loaded()
     .then(function() {
+      console.log($routeParams.id);
       if ($routeParams.id) {
         $scope.project = $scope.projects.$getRecord($routeParams.id);
         $scope.title = "Editing Project: " + $scope.project.name;

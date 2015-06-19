@@ -1,9 +1,9 @@
 controllers.controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
 
   $scope.submit = function() {
-
+    
     if($scope.form.$valid) {
-      $http.post('//formspree.io/zach+test@burlingtoncollective.com', {
+      $http.post('//formspree.io/zach@burlingtoncollective.com', {
         name: $scope.contact.name,
         email: $scope.contact.email,
         message: $scope.contact.message
@@ -14,6 +14,7 @@ controllers.controller('ContactCtrl', ['$scope', '$http', function($scope, $http
         console.log(data);
       });
     }
+    
   }
 
 }]);

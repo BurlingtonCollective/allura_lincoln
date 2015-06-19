@@ -48,7 +48,7 @@ app.config(['$routeProvider', function($routeProvider) {
         }]
       }
     })
-    .when('/project/:id', {
+    .when('/project/id/:id', {
       templateUrl: 'modules/project/detail/index.html',
       controller: 'ProjectDetailCtrl',
       resolve: {
