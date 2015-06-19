@@ -66,6 +66,24 @@ app.config(['$routeProvider', function($routeProvider) {
         }]
       }
     })
+    .when('/category/id/:id', {
+      templateUrl: 'modules/category/detail/index.html',
+      controller: 'CategoryDetailCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    })
+    .when('/category/new', {
+      templateUrl: 'modules/category/detail/index.html',
+      controller: 'CategoryDetailCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    })
     .when('/error', {
       templateUrl: 'modules/error/index.html',
       controller: 'LoginCtrl'

@@ -1,0 +1,23 @@
+<section id="category" class="detail">
+  <form class="form" name="form" ng-submit="submit()" novalidate>
+    <div class="container">
+      <div class="page-header">
+        <h1>{{ title }} <button type="submit" class="btn-lg btn-primary pull-right">{{ submitText }}</button></h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="form-group">
+            <label>Parent</label>
+            <select class="form-control" name="parent" ng-model="category.parent" ng-options="cat.$id as cat.name for cat in parentOptions">
+              <option value="">-- no parent, make top-level --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" ng-model="category.name">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
