@@ -6,7 +6,7 @@ var directives = angular.module('app.directives', []);
 var fbPath = 'https://alluralincoln.firebaseio.com';
 var fb = new Firebase(fbPath);
 
-app.run(['$rootScope', '$location', function($rootScope, $location) {
+app.run(['$rootScope', '$location', '$window', function($rootScope, $location, $window) {
   $rootScope.$on('$routeChangeSuccess', function() {
     $window.ga('send', 'pageview', { page: $location.path() });
   });
