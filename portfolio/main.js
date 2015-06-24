@@ -8,7 +8,7 @@ var fb = new Firebase(fbPath);
 
 app.run(['$rootScope', '$location', function($rootScope, $location) {
   $rootScope.$on('$routeChangeSuccess', function() {
-    console.log('dont forget analytics');
+    $window.ga('send', 'pageview', { page: $location.path() });
   });
 }]);
 
