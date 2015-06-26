@@ -47,6 +47,11 @@ controllers.controller('CategoryDetailCtrl', [
             $location.path('/category/id/' + data.key());
           });
       }
+    } else {
+      $scope.$root.$broadcast('form.message', {
+        type: 'danger',
+        msg: 'Submit Error: Check that you\'ve filled all fields correctly'
+      });
     }
   }
 

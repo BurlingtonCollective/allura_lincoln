@@ -1,4 +1,4 @@
-var app = angular.module('cms', ['ngRoute', 'firebase', 'app.controllers', 'app.services', 'app.directives']);
+var app = angular.module('cms', ['ngRoute', 'firebase', 'ui.bootstrap', 'app.controllers', 'app.services', 'app.directives']);
 
 var controllers = angular.module('app.controllers', []);
 var services = angular.module('app.services', []);

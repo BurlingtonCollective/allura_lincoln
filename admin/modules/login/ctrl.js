@@ -1,4 +1,4 @@
-controllers.controller('LoginCtrl', ['$scope', '$location', 'currentAuth', 'Auth', function($scope, $location, currentAuth, Auth) {
+controllers.controller('LoginCtrl', ['$scope', '$location', '$timeout', 'currentAuth', 'Auth', function($scope, $location, $timeout, currentAuth, Auth) {
   
   if (currentAuth != null) {
     $location.path('/dashboard');
@@ -12,7 +12,10 @@ controllers.controller('LoginCtrl', ['$scope', '$location', 'currentAuth', 'Auth
       }).then(function(authData) {
         $location.path('/dashboard');
       }).catch(function(error) {
-        console.error('Authentication failed: ' + error);
+        $scope.$root.$broadcast('form.message', {
+          type: 'danger',
+          msg: 'Authentication failed: ' + error
+        });
       });
     }
   }
