@@ -1,4 +1,4 @@
-controllers.controller('LoginCtrl', ['$scope', '$location', '$timeout', 'currentAuth', 'Auth', function($scope, $location, $timeout, currentAuth, Auth) {
+controllers.controller('LoginCtrl', ['$scope', '$location', 'currentAuth', 'Auth', function($scope, $location, currentAuth, Auth) {
   
   if (currentAuth != null) {
     $location.path('/dashboard');
