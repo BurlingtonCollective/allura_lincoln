@@ -17,6 +17,12 @@
           <li ng-repeat="category in categories"><a ng-href="#/category/id/{{ category.$id }}">{{ category.name }}</a></li>
         </ul>
       </div>
+      <div class="col-xs-6">
+        <h2>Experience <a href="#/experience/new" class="btn btn-link">+ add</a></h2>
+        <ul class="nav nav-stacked">
+          <li ng-repeat="entry in experience"><a ng-href="#/experience/id/{{ entry.$id }}">{{ entry.name }}</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>

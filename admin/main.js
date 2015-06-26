@@ -84,6 +84,24 @@ app.config(['$routeProvider', function($routeProvider) {
         }]
       }
     })
+    .when('/experience/id/:id', {
+      templateUrl: 'modules/experience/detail/index.html',
+      controller: 'ExperienceDetailCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    })
+    .when('/experience/new', {
+      templateUrl: 'modules/experience/detail/index.html',
+      controller: 'ExperienceDetailCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    })
     .when('/error', {
       templateUrl: 'modules/error/index.html',
       controller: 'ErrorCtrl'

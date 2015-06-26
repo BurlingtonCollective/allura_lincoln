@@ -44,6 +44,10 @@ controllers.controller('CategoryDetailCtrl', [
 
       if (typeof($scope.category.$id) != 'undefined') {
         $scope.categories.$save($scope.category);
+        $scope.$root.$broadcast('form.message', {
+          type: 'success',
+          msg: 'Category Saved!'
+        });
       } else {
         $scope.categories.$add($scope.category)
           .then(function(data) {
@@ -64,7 +68,7 @@ controllers.controller('CategoryDetailCtrl', [
       controller: 'ConfirmationModalCtrl',
       resolve: {
         msg: function() {
-          return 'Are you sure you want to delete the project: "' + $scope.category.name + '"?'
+          return 'Are you sure you want to delete the category: "' + $scope.category.name + '"?'
         }
       }
     });

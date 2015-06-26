@@ -1,0 +1,42 @@
+<section id="experience" class="detail">
+  <form class="form" name="form" ng-submit="submit()" novalidate>
+    <div class="container">
+      <div class="page-header">
+        <h1>{{ title }}</h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div form-message></div>
+        </div>
+        <div class="col-xs-8">
+          <div class="form-group" ng-class="{'has-error': (form.name.$invalid && form.name.$dirty) || (form.$submitted && form.name.$error.required)}">
+            <label>Job Title</label>
+            <input type="text" class="form-control" name="name" ng-model="entry.name" required>
+          </div>
+          <div class="form-group" ng-class="{'has-error': (form.description.$invalid && form.description.$dirty)}">
+            <label>Duties</label>
+            <textarea class="form-control" rows="5" name="description" ng-model="entry.description"></textarea>
+          </div>
+          <div class="form-group" ng-class="{'has-error': (form.img.$invalid && form.img.$dirty) || (form.$submitted && form.img.$error.required)}">
+            <label>Image</label>
+            <input type="url" class="form-control" name="img" ng-model="entry.img" required>
+          </div>
+          <div class="form-group" ng-class="{'has-error': (form.date.$invalid && form.date.$dirty) || form.$submitted && form.date.$error.required}">
+            <label>Date</label>
+            <input type="string" class="form-control" name="date" ng-model="entry.date" required>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="well">
+            <p>
+              <button type="submit" class="btn btn-block btn-primary">{{ submitText }}</button>
+            </p>
+            <p ng-show="showDelete">
+              <button type="button" class="btn btn-block btn-danger" ng-click="deleteEntry()">Delete Experience</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
