@@ -10,5 +10,9 @@ $ bundle install
 $ bundle exec jekyll serve --baseurl ''
 ```
 
+Compile LESS files
+```
+$ grunt watch
+```
 
 And navigate to http://localhost:4000
