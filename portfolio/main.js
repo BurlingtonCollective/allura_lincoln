@@ -34,6 +34,10 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'portfolio/modules/contact/index.html',
       controller: 'ContactCtrl'
     })
+    .when('/thank-you', {
+      templateUrl: 'portfolio/modules/thanks/index.html',
+      controller: 'HomeCtrl'
+    })
     .when('/error', {
       templateUrl: 'portfolio/modules/error/index.html',
       controller: 'HomeCtrl'
