@@ -1,4 +1,4 @@
-var app = angular.module('cms', ['ngRoute', 'firebase', 'app.controllers', 'app.services', 'app.directives']);
+var app = angular.module('cms', ['ngRoute', 'firebase', 'ui.bootstrap', 'app.controllers', 'app.services', 'app.directives']);
 
 var controllers = angular.module('app.controllers', []);
 var services = angular.module('app.services', []);
@@ -78,6 +78,24 @@ app.config(['$routeProvider', function($routeProvider) {
     .when('/category/new', {
       templateUrl: 'modules/category/detail/index.html',
       controller: 'CategoryDetailCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    })
+    .when('/experience/id/:id', {
+      templateUrl: 'modules/experience/detail/index.html',
+      controller: 'ExperienceDetailCtrl',
+      resolve: {
+        'currentAuth': ['Auth', function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    })
+    .when('/experience/new', {
+      templateUrl: 'modules/experience/detail/index.html',
+      controller: 'ExperienceDetailCtrl',
       resolve: {
         'currentAuth': ['Auth', function(Auth) {
           return Auth.$requireAuth();

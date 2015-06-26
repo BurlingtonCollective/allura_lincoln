@@ -2,13 +2,16 @@
   <form class="form" name="form" ng-submit="submit()" novalidate>
     <div class="container">
       <div class="page-header">
-        <h1>{{ title }} <button type="submit" class="btn-lg btn-primary pull-right">{{ submitText }}</button></h1>
+        <h1>{{ title }}</h1>
       </div>
       <div class="row">
-        <div class="col-xs-6">
-          <div class="form-group">
+        <div class="col-xs-12">
+          <div form-message></div>
+        </div>
+        <div class="col-xs-8">
+          <div class="form-group" ng-class="{'has-error': (form.name.$invalid && form.name.$dirty) || (form.$submitted && form.name.$error.required)}">
             <label>Name</label>
-            <input type="text" class="form-control" name="name" ng-model="category.name">
+            <input type="text" class="form-control" name="name" ng-model="category.name" required>
           </div>
           <div class="checkbox">
             <label>
@@ -21,9 +24,19 @@
               <option value="">-- no parent, make top-level --</option>
             </select>
           </div>
-          <div class="form-group">
+          <div class="form-group" ng-class="{'has-error': (form.coverImg.$invalid && form.coverImg.$dirty) || (form.$submitted && form.coverImg.$error.required)}">
             <label>Cover Image</label>
-            <input type="url" class="form-control" name="coverImg" ng-model="category.coverImg">
+            <input type="url" class="form-control" name="coverImg" ng-model="category.coverImg" required>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="well">
+            <p>
+              <button type="submit" class="btn btn-block btn-primary">{{ submitText }}</button>
+            </p>
+            <p ng-show="showDelete">
+              <button type="button" class="btn btn-block btn-danger" ng-click="deleteCategory()">Delete Category</button>
+            </p>
           </div>
         </div>
       </div>
