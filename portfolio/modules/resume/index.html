@@ -3,62 +3,15 @@
     <div class="row">
       <div class="col-xs-12">
         <h1 id="page-title">Experience</h1>
-        <article class="entry">
+        <article class="entry" ng-repeat="entry in experience">
           <div class="row">
             <div class="col-xs-9">
-              <h1>Computer Arts Center Monitor</h1>
-              <p>Primary Duties: Assisting customer with printing jobs, including
-              Inkjets and Laser printers. Assisting with scanning images. 
-              Taking and stocking inventory. Teaching basics in programs
-              such as Lightroom, Illustrator, Indesign, Acrobat, Word,
-              and Papercut. Keeping printers stocked with paper, and replacing
-              toners and inks when necessary. </p>
+              <h1>{{entry.name}}</h1>
+              <p>{{entry.description}}</p>
             </div>
             <div class="col-xs-3">
-              <img class="img-responsive" src="http://41.media.tumblr.com/tumblr_m7bpwvnPWC1ryfqg2o1_500.jpg">
-              <span class="date">[2014 - 2015]</span>
-            </div>
-          </div>
-        </article>
-        <article class="entry">
-          <div class="row">
-            <div class="col-xs-9">
-              <h1>Photographer</h1>
-              <p>Primary Duties: Scheduling meetings, Photographing and   (2009 - 2015)
-              calibration with client, Photoshop and Lightroom,
-              Delivering images.</p>
-            </div>
-            <div class="col-xs-3">
-              <img class="img-responsive pad" src="portfolio/images/logo.png">
-              <span class="date">[2009 - 2015]</span>
-            </div>
-          </div>
-        </article>
-        <article class="entry">
-          <div class="row">
-            <div class="col-xs-9">
-              <h1>Web Development</h1>
-              <p>Primary Duties: Developing page’s artistic layout, creating    (2014)
-              layers that allow easy access to pieces of page, completing
-              basic idea for head developer.</p>
-            </div>
-            <div class="col-xs-3">
-              <img class="img-responsive" src="https://scontent-iad3-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/10614382_1513581015542195_2471887694277930744_n.png?oh=c3ad54a860878c424039a42799d41167&oe=5634C1C7">
-              <span class="date">[2014]</span>
-            </div>
-          </div>
-        </article>
-        <article class="entry">
-          <div class="row">
-            <div class="col-xs-9">
-              <h1>Murray’s Concession Stand</h1>
-              <p>Primary Duties: Taking Orders, Working Cash Register,
-               Delivering Food, Occasional leaving to get out of stock 
-              items during shift.</p>
-            </div>
-            <div class="col-xs-3">
-              <img class="img-responsive pad" src="http://smartblogs.com/wp-content/uploads/2012/06/foodtruck.jpg">
-              <span class="date">[2012]</span>
+              <img class="img-responsive" ng-src="{{entry.img}}" ng-class="{'pad': $index == 1 || $index == 3}">
+              <span class="date">[{{entry.date}}]</span>
             </div>
           </div>
         </article>

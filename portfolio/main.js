@@ -28,7 +28,7 @@ app.config(['$routeProvider', function($routeProvider) {
     })
     .when('/resume', {
       templateUrl: 'portfolio/modules/resume/index.html',
-      controller: 'HomeCtrl'
+      controller: 'ResumeCtrl'
     })
     .when('/contact', {
       templateUrl: 'portfolio/modules/contact/index.html',
