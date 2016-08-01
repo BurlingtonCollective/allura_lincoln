@@ -1,45 +1,49 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="154px" height="37px" viewBox="0 0 154 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
-    <title>paragraph Decoration</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="default" sketch:type="MSArtboardGroup" transform="translate(-129.000000, -933.000000)" fill="#1E1E1E">
-            <g id="Left-Sidebar" sketch:type="MSLayerGroup" transform="translate(25.000000, 30.000000)">
-                <g id="paragraph-Decoration" transform="translate(80.000000, 886.000000)" sketch:type="MSShapeGroup">
-                    <path d="M24.37875,17.1926667 L38.833625,17.1926667 L38.833625,22.4466667 L24.37875,22.4466667 L24.37875,17.1926667 Z" id="Fill-1"></path>
-                    <path d="M45.433125,17.1926667 L58.706,17.1926667 L58.706,22.4466667 L45.433125,22.4466667 L45.433125,17.1926667 Z" id="Fill-2"></path>
-                    <path d="M108.620875,17.1926667 L118.914125,17.1926667 L118.914125,22.4466667 L108.620875,22.4466667 L108.620875,17.1926667 Z" id="Fill-3"></path>
-                    <path d="M68.925375,17.1926667 L76.1405,17.1926667 L76.1405,22.4466667 L68.925375,22.4466667 L68.925375,17.1926667 Z" id="Fill-4"></path>
-                    <path d="M82.173625,17.1926667 L103.819,17.1926667 L103.819,22.4466667 L82.173625,22.4466667 L82.173625,17.1926667 Z" id="Fill-5"></path>
-                    <path d="M132.72875,17.1926667 L141.125875,17.1926667 L141.125875,22.4466667 L132.72875,22.4466667 L132.72875,17.1926667 Z" id="Fill-6"></path>
-                    <path d="M144.74575,17.1926667 L151.9855,17.1926667 L151.9855,22.4466667 L144.74575,22.4466667 L144.74575,17.1926667 Z" id="Fill-7"></path>
-                    <path d="M158.018625,17.1926667 L162.254125,17.1926667 L162.254125,22.4466667 L158.018625,22.4466667 L158.018625,17.1926667 Z" id="Fill-8"></path>
-                    <path d="M165.800125,17.1926667 L177.915625,17.1926667 L177.915625,22.4466667 L165.800125,22.4466667 L165.800125,17.1926667 Z" id="Fill-9"></path>
-                    <path d="M162.8205,27.8733333 L177.915625,27.8733333 L177.915625,32.8806667 L162.8205,32.8806667 L162.8205,27.8733333 Z" id="Fill-10"></path>
-                    <path d="M143.588375,27.8733333 L156.76275,27.8733333 L156.76275,32.8806667 L143.588375,32.8806667 L143.588375,27.8733333 Z" id="Fill-11"></path>
-                    <path d="M83.355625,27.8733333 L94.190625,27.8733333 L94.190625,32.8806667 L83.355625,32.8806667 L83.355625,27.8733333 Z" id="Fill-12"></path>
-                    <path d="M126.104625,27.8733333 L133.344375,27.8733333 L133.344375,32.8806667 L126.104625,32.8806667 L126.104625,27.8733333 Z" id="Fill-13"></path>
-                    <path d="M97.85975,27.8733333 L120.0715,27.8733333 L120.0715,32.8806667 L97.85975,32.8806667 L97.85975,27.8733333 Z" id="Fill-14"></path>
-                    <path d="M61.094625,27.8733333 L69.516375,27.8733333 L69.516375,32.8806667 L61.094625,32.8806667 L61.094625,27.8733333 Z" id="Fill-15"></path>
-                    <path d="M50.259625,27.8733333 L57.47475,27.8733333 L57.47475,32.8806667 L50.259625,32.8806667 L50.259625,27.8733333 Z" id="Fill-16"></path>
-                    <path d="M39.991,27.8733333 L44.251125,27.8733333 L44.251125,32.8806667 L39.991,32.8806667 L39.991,27.8733333 Z" id="Fill-17"></path>
-                    <path d="M24.37875,27.8733333 L36.98675,27.8733333 L36.98675,32.8806667 L24.37875,32.8806667 L24.37875,27.8733333 Z" id="Fill-18"></path>
-                    <path d="M24.37875,38.332 L38.833625,38.332 L38.833625,43.5613333 L24.37875,43.5613333 L24.37875,38.332 Z" id="Fill-19"></path>
-                    <path d="M45.433125,38.332 L58.706,38.332 L58.706,43.5613333 L45.433125,43.5613333 L45.433125,38.332 Z" id="Fill-20"></path>
-                    <path d="M94.190625,38.332 L133.344375,38.332 L133.344375,43.5613333 L94.190625,43.5613333 L94.190625,38.332 Z" id="Fill-21"></path>
-                    <path d="M68.925375,38.332 L76.1405,38.332 L76.1405,43.5613333 L68.925375,43.5613333 L68.925375,38.332 Z" id="Fill-22"></path>
-                    <path d="M144.74575,38.332 L151.9855,38.332 L151.9855,43.5613333 L144.74575,43.5613333 L144.74575,38.332 Z" id="Fill-23"></path>
-                    <path d="M158.018625,38.332 L162.254125,38.332 L162.254125,43.5613333 L158.018625,43.5613333 L158.018625,38.332 Z" id="Fill-24"></path>
-                    <path d="M165.800125,38.332 L177.915625,38.332 L177.915625,43.5613333 L165.800125,43.5613333 L165.800125,38.332 Z" id="Fill-25"></path>
-                    <path d="M162.8205,48.988 L177.915625,48.988 L177.915625,53.9953333 L162.8205,53.9953333 L162.8205,48.988 Z" id="Fill-26"></path>
-                    <path d="M143.588375,48.988 L156.76275,48.988 L156.76275,53.9953333 L143.588375,53.9953333 L143.588375,48.988 Z" id="Fill-27"></path>
-                    <path d="M55.0615,48.988 L83.97125,48.988 L83.97125,53.9953333 L55.0615,53.9953333 L55.0615,48.988 Z" id="Fill-28"></path>
-                    <path d="M126.104625,48.988 L133.344375,48.988 L133.344375,53.9953333 L126.104625,53.9953333 L126.104625,48.988 Z" id="Fill-29"></path>
-                    <path d="M24.37875,48.988 L36.98675,48.988 L36.98675,53.9953333 L24.37875,53.9953333 L24.37875,48.988 Z" id="Fill-30"></path>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-402 262 154 37"
+	 style="enable-background:new -402 262 154 37;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2A2A2B;}
+</style>
+<title>paragraph Decoration</title>
+<desc>Created with Sketch.</desc>
+<g id="Home" sketch:type="MSPage">
+	<g id="default" transform="translate(-129.000000, -933.000000)" sketch:type="MSArtboardGroup">
+		<g id="Left-Sidebar" transform="translate(25.000000, 30.000000)" sketch:type="MSLayerGroup">
+			<g id="paragraph-Decoration" transform="translate(80.000000, 886.000000)" sketch:type="MSShapeGroup">
+				<path id="Fill-1" class="st0" d="M-377.6,279.2h14.5v5.3h-14.5V279.2z"/>
+				<path id="Fill-2" class="st0" d="M-356.6,279.2h13.3v5.3h-13.3V279.2z"/>
+				<path id="Fill-3" class="st0" d="M-293.4,279.2h10.3v5.3h-10.3V279.2z"/>
+				<path id="Fill-4" class="st0" d="M-333.1,279.2h7.2v5.3h-7.2V279.2z"/>
+				<path id="Fill-5" class="st0" d="M-319.8,279.2h21.6v5.3h-21.6V279.2z"/>
+				<path id="Fill-6" class="st0" d="M-269.3,279.2h8.4v5.3h-8.4V279.2z"/>
+				<path id="Fill-7" class="st0" d="M-257.3,279.2h7.2v5.3h-7.2V279.2z"/>
+				<path id="Fill-8" class="st0" d="M-244,279.2h4.2v5.3h-4.2V279.2z"/>
+				<path id="Fill-9" class="st0" d="M-236.2,279.2h12.1v5.3h-12.1V279.2z"/>
+				<path id="Fill-10" class="st0" d="M-239.2,289.9h15.1v5h-15.1V289.9z"/>
+				<path id="Fill-11" class="st0" d="M-258.4,289.9h13.2v5h-13.2V289.9z"/>
+				<path id="Fill-12" class="st0" d="M-318.6,289.9h10.8v5h-10.8V289.9z"/>
+				<path id="Fill-13" class="st0" d="M-275.9,289.9h7.2v5h-7.2V289.9z"/>
+				<path id="Fill-14" class="st0" d="M-304.1,289.9h22.2v5h-22.2V289.9z"/>
+				<path id="Fill-15" class="st0" d="M-340.9,289.9h8.4v5h-8.4V289.9z"/>
+				<path id="Fill-16" class="st0" d="M-351.7,289.9h7.2v5h-7.2V289.9z"/>
+				<path id="Fill-17" class="st0" d="M-362,289.9h4.3v5h-4.3V289.9z"/>
+				<path id="Fill-18" class="st0" d="M-377.6,289.9h12.6v5h-12.6V289.9z"/>
+				<path id="Fill-19" class="st0" d="M-377.6,300.3h14.5v5.2h-14.5V300.3z"/>
+				<path id="Fill-20" class="st0" d="M-356.6,300.3h13.3v5.2h-13.3V300.3z"/>
+				<path id="Fill-21" class="st0" d="M-307.8,300.3h39.2v5.2h-39.2V300.3z"/>
+				<path id="Fill-22" class="st0" d="M-333.1,300.3h7.2v5.2h-7.2V300.3z"/>
+				<path id="Fill-23" class="st0" d="M-257.3,300.3h7.2v5.2h-7.2V300.3z"/>
+				<path id="Fill-24" class="st0" d="M-244,300.3h4.2v5.2h-4.2V300.3z"/>
+				<path id="Fill-25" class="st0" d="M-236.2,300.3h12.1v5.2h-12.1V300.3z"/>
+				<path id="Fill-26" class="st0" d="M-239.2,311h15.1v5h-15.1V311z"/>
+				<path id="Fill-27" class="st0" d="M-258.4,311h13.2v5h-13.2V311z"/>
+				<path id="Fill-28" class="st0" d="M-346.9,311h28.9v5h-28.9V311z"/>
+				<path id="Fill-29" class="st0" d="M-275.9,311h7.2v5h-7.2V311z"/>
+				<path id="Fill-30" class="st0" d="M-377.6,311h12.6v5h-12.6V311z"/>
+			</g>
+		</g>
+	</g>
+</g>
 </svg>
